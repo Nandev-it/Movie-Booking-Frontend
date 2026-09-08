@@ -1,4 +1,4 @@
-```vue
+
 <script setup>
 defineProps({
   movie: {
@@ -47,4 +47,3 @@ defineProps({
     </div>
   </article>
 </template>
-```

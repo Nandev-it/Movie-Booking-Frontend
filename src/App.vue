@@ -1,7 +1,7 @@
 <script setup>
-import Movies from './views/frontend/Movies.vue';
+import Home from './views/frontend/Home.vue';
 </script>
 
 <template>
-  <Movies />
+  <Home />
 </template>
