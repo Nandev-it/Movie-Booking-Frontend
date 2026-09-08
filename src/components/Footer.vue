@@ -310,7 +310,7 @@ const bankLogos = [
                   class="contact-link"
                 >
                   <Mail :size="17" />
-                  khemsopheanandev@
+                  khemsopheanandev@gmail.com
                 </a>
 
               </div>
