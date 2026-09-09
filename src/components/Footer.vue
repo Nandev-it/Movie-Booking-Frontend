@@ -1,4 +1,4 @@
-```vue
+
 <script setup>
 import {
   Facebook,
@@ -577,4 +577,3 @@ const bankLogos = [
 }
 
 </style>
-```
