@@ -18,6 +18,9 @@ import acledaLogo from '../assets/banks/acleda.png'
 import amretLogo from '../assets/banks/amret.png'
 import trueLogo from '../assets/banks/true.png'
 import wingsLogo from '../assets/banks/wings.png'
+import logoImg from '../assets/icons/cineverse-legend.png'
+
+
 
 const bankLogos = [
   { src: abaLogo, alt: 'ABA Bank' },
@@ -54,7 +57,7 @@ const bankLogos = [
       <!-- ===================== -->
 
       <div
-        class="grid grid-cols-1 gap-10 border-b border-gray-800 pb-10
+        class="grid grid-cols-1 gap-10  pb-10
                sm:grid-cols-2
                lg:grid-cols-4
                xl:grid-cols-5"
@@ -65,31 +68,14 @@ const bankLogos = [
 
           <!-- Logo -->
           <a
-            href="#"
+            href="/"
             class="mb-5 inline-flex items-center gap-3"
           >
-            <div
-              class="flex h-11 w-11 items-center justify-center
-                     rounded-xl bg-[#f4c75a]
-                     shadow-lg shadow-yellow-500/20"
-            >
-              <span class="text-2xl">🎬</span>
-            </div>
-
-            <div>
-              <h2
-                class="text-2xl font-black tracking-tight text-white"
-              >
-                Cine<span class="text-[#e5ad2f]">verse</span>
-              </h2>
-
-              <p
-                class="text-[9px] font-semibold uppercase
-                       tracking-[0.25em] text-gray-500"
-              >
-                Movie Booking
-              </p>
-            </div>
+            <img
+              :src="logoImg"
+              alt="Cineverse Logo"\
+              class="h-11 w-full object-cover"
+            />
           </a>
 
           <!-- Description -->
@@ -298,7 +284,7 @@ const bankLogos = [
               <div class="space-y-3">
 
                 <a
-                  href="tel:+85512345678"
+                  href="tel:+85590 207 392"
                   class="contact-link"
                 >
                   <Phone :size="17" />
@@ -306,7 +292,7 @@ const bankLogos = [
                 </a>
 
                 <a
-                  href="mailto:info@cineverse.com"
+                  href="mailto:khemsopheanandev@gmail.com"
                   class="contact-link"
                 >
                   <Mail :size="17" />
@@ -322,12 +308,12 @@ const bankLogos = [
       </div>
 
 
-      <!-- ===================== -->
-      <!-- FEATURES / BADGES -->
-      <!-- ===================== -->
-
+      <!-- PAYMENT SUPPORT -->
+      <div class="payment-support-divider">
+        <span>Payment Support</span>
+      </div>
       <div class="border-b border-gray-800 py-8">
-        <div class="bank-marquee-wrap">
+        <div class="bank-marquee-wrap opacity-fade-x">
           <div class="bank-marquee-track">
             <div
               v-for="(logo, index) in [...bankLogos, ...bankLogos]"
@@ -452,6 +438,69 @@ const bankLogos = [
 
 
 /* =========================
+   PAYMENT SUPPORT DIVIDER
+========================= */
+
+.payment-support-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* margin: 2rem 0; */
+}
+
+.payment-support-divider::before,
+.payment-support-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(107, 114, 128, 0.5) 100%
+  );
+}
+
+.payment-support-divider::after {
+  background: linear-gradient(
+    to right,
+    rgba(107, 114, 128, 0.5) 0%,
+    transparent 100%
+  );
+}
+
+.payment-support-divider span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #9ca3af;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================
+   OPACITY FADE
+========================= */
+
+.opacity-fade-x {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 25%,
+    black 75%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 25%,
+    black 75%,
+    transparent 100%
+  );
+}
+
+
+/* =========================
    BANK MARQUEE
 ========================= */
 
@@ -475,7 +524,7 @@ const bankLogos = [
   height: 72px;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  /* border-radius: 14px; */
   /* border: 1px solid #27272a; */
   /* background: #111111; */
   padding: 0.9rem 1rem;
@@ -489,8 +538,8 @@ const bankLogos = [
 .bank-card:hover {
   transform: translateY(-4px);
   border-color: #e5ad2f;
-  background: #171717;
-  box-shadow: 0 12px 24px rgba(229, 173, 47, 0.12);
+  /* background: #171717; */
+  /* box-shadow: 0 12px 24px rgba(229, 173, 47, 0.12); */
 }
 
 .bank-logo {

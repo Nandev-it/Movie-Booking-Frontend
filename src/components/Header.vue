@@ -18,6 +18,7 @@ import {
 } from 'lucide-vue-next'
 
 import api from '../services/api'
+import logoImg from '../assets/icons/cineverse-legend.png'
 
 // =====================================================
 // SIDEBAR
@@ -316,7 +317,7 @@ const navLinks = [
                        transition-all duration-300
                        hover:bg-white/10
                        hover:text-white
-                       md:hidden"
+                       md:hidden cursor-pointer"
             >
 
                 <Menu
@@ -341,28 +342,11 @@ const navLinks = [
                 class="flex items-center gap-2"
             >
 
-                <div
-                    class="flex h-9 w-9
-                           items-center justify-center
-                           rounded-xl
-                           bg-gradient-to-br
-                           from-purple-600
-                           to-purple-800
-                           shadow-lg
-                           shadow-purple-500/20"
-                >
-
-                    <Film class="h-5 w-5 text-white" />
-
-                </div>
-
-
-                <span
-                    class="text-lg font-bold
-                           text-white sm:text-xl"
-                >
-                    Cineverse
-                </span>
+                <img
+                    :src="logoImg"
+                    alt="Cineverse Logo"
+                    class="h-9 w-full object-cover"
+                />
 
             </a>
 
@@ -1102,7 +1086,7 @@ const navLinks = [
                    border-r border-white/10
                    bg-gray-950
                    shadow-2xl
-                   md:hidden"
+                   md:hidden hover:cursor-pointer"
         >
 
             <!-- Sidebar Header -->
@@ -1119,28 +1103,11 @@ const navLinks = [
                     class="flex items-center gap-2"
                 >
 
-                    <div
-                        class="flex h-9 w-9
-                               items-center justify-center
-                               rounded-xl
-                               bg-gradient-to-br
-                               from-purple-600
-                               to-purple-800"
-                    >
-
-                        <Film
-                            class="h-5 w-5
-                                   text-white"
-                        />
-
-                    </div>
-
-
-                    <span
-                        class="font-bold text-white"
-                    >
-                        Cineverse
-                    </span>
+                    <img
+                        :src="logoImg"
+                        alt="Cineverse Logo"
+                        class="h-9 w-full object-cover"
+                    />
 
                 </div>
 
@@ -1153,7 +1120,7 @@ const navLinks = [
                            text-gray-400
                            transition
                            hover:bg-white/10
-                           hover:text-white"
+                           hover:text-white hover:cursor-pointer"
                 >
 
                     <X class="h-5 w-5" />
