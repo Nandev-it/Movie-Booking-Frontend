@@ -345,7 +345,7 @@ const navLinks = [
                 <img
                     :src="logoImg"
                     alt="Cineverse Logo"
-                    class="h-9 w-full object-cover"
+                    class="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 lg:h-10 lg:w-10 object-cover"
                 />
 
             </a>
@@ -1106,7 +1106,7 @@ const navLinks = [
                     <img
                         :src="logoImg"
                         alt="Cineverse Logo"
-                        class="h-9 w-full object-cover"
+                        class="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 lg:h-10 lg:w-10 object-cover"
                     />
 
                 </div>
