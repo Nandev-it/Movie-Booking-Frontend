@@ -6,7 +6,11 @@ import Header from '../../components/Header.vue';
 </script>
 
 <template>
-  <Header/>
-  <Movies />
-  <Footer />
+  <div class="flex flex-col min-h-screen">
+    <Header />
+    <div class="flex-grow">
+      <Movies />
+    </div>
+    <Footer />
+  </div>
 </template>

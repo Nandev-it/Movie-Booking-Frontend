@@ -32,7 +32,7 @@ const bankLogos = [
 </script>
 
 <template>
-  <footer class="relative overflow-hidden bg-black text-white">
+  <footer class="relative min-h-screen overflow-hidden bg-black text-white mt-12">
 
     <!-- Background Effect -->
     <div
@@ -73,8 +73,8 @@ const bankLogos = [
           >
             <img
               :src="logoImg"
-              alt="Cineverse Logo"\
-              class="h-11 w-full object-cover"
+              alt="Cineverse Logo"
+              class="h-11 w-11 object-cover"
             />
           </a>
 
